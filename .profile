@@ -34,6 +34,13 @@ mkcdir ()
   cd $1
 }
 
+# https://superuser.com/questions/1144959/how-do-i-stop-fullscreen-games-from-minimizing-when-i-click-on-another-window-on
+export SDL_VIDEO_MINIMIZE_ON_FOCUS_LOSS=0
 
+# add timestamps to history
+export HISTTIMEFORMAT='%Y-%m-%d %T    '
+
+# Shortcut hist
+alias hist='history'
 
 export PATH="$HOME/.cargo/bin:$PATH"
