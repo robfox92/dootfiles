@@ -26,7 +26,7 @@ function ntfy_precmd() {
     if [[ $NTFY_DURATION -gt $NTFY_MIN_SECONDS ]]; then
       local ntfy_payload="command \""$NTFY_CMD"\" on "$(hostname)" complete (took "$NTFY_DURATION" seconds)"
       curl  -d $ntfy_payload \
-            -H "Tags: "$(hostname)""
+            -H "Tags: "$(hostname)"" \
             $NTFY_URL
     fi
     unset NTFY_TIMER
