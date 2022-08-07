@@ -12,4 +12,33 @@ fi
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
+# colours:
+# for i in {0..255}; do print -Pn "%K{$i}  %k%F{$i}${(l:3::0:)i}%f " ${${(M)$((i%6)):#3}:+$'\n'}; done
+
+# override the directory background based on hostname
+case $(hostname) in
+"rob-pc")
+  typeset -g POWERLEVEL9K_DIR_BACKGROUND=30
+  ;;
+"cantor")
+  typeset -g POWERLEVEL9K_DIR_BACKGROUND=4
+  ;;
+"rob-xps")
+  typeset -g POWERLEVEL9K_DIR_BACKGROUND=136
+  ;;
+*)
+  typeset -g POWERLEVEL9K_DIR_BACKGROUND=99
+  ;;
+esac
+
+# super-override directory backround based on username
+case $(whoami) in
+"root")
+  typeset -g POWERLEVEL9K_DIR_BACKGROUND=1
+  ;;
+*)
+  # default
+  ;;
+esac
+
 export EDITOR=/usr/bin/vim
