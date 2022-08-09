@@ -5,8 +5,15 @@ NTFY_URL="https://ntfy.rfox.xyz/zsh-alerts"
 function ntfy_preexec() {
   # executed between when you press enter on a command prompt 
   # but before command is executed
+  NTFY_CMD="$1"
+
+  if [[ ${NTFY_CMD:0:1} == " " ]]; then
+    # line starts with a space so don't send a notification
+    return
+  fi
+
   if [ -n "$NTFY_EXCLUDE" ]; then
-    # NTFY_EXCLUDE is defined
+    # NTFY_EXCLUDE is defined, so check it
     NTFY_CMD="$1"
     for exc in $NTFY_EXCLUDE; do
       if [ "$(echo $NTFY_CMD | grep -c "$exc")" -gt 0 ]; then
