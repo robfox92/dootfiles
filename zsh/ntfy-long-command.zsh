@@ -1,4 +1,4 @@
-NTFY_EXCLUDE=(vim ssh tmux watch journalctl)
+NTFY_EXCLUDE=(vim ssh tmux watch journalctl ping)
 NTFY_MIN_SECONDS=600
 NTFY_URL="https://ntfy.rfox.xyz/zsh-alerts"
 
