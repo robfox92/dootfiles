@@ -34,8 +34,8 @@ function ntfy_precmd() {
       local ntfy_payload="command \""$NTFY_CMD"\" on "$(hostname)" complete (took "$NTFY_DURATION" seconds)"
       curl  -d $ntfy_payload \
             -H "Tags: "$(hostname)"" \
-            --silent \
-            $NTFY_URL
+            -S -s -o /dev/null \
+            $NTFY_URL 
     fi
     unset NTFY_TIMER
     unset NTFY_CMD
