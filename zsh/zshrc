@@ -44,3 +44,4 @@ case $(whoami) in
 esac
 
 export EDITOR=/usr/bin/vim
+alias hist='less +G $HISTFILE'
