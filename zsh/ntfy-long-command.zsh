@@ -1,6 +1,6 @@
-NTFY_EXCLUDE=(vim ssh tmux watch journalctl ping crontab WhereDoThePeersComeFrom.py)
+NTFY_EXCLUDE=(vim ssh tmux watch journalctl crontab)
 NTFY_MIN_SECONDS=300
-NTFY_URL="https://ntfy.rfox.xyz/zsh-alerts"
+NTFY_URL="https://ntfy.sh/my-zsh-alerts"
 
 function ntfy_preexec() {
   # executed between when you press enter on a command prompt 
