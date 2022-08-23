@@ -48,3 +48,8 @@ typeset -g NTFY_EXCLUDE=(vim ssh tmux watch journalctl ping crontab WhereDoThePe
 typeset -g NTFY_MIN_SECONDS=300
 typeset -g NTFY_URL="https://ntfy.rfox.xyz/zsh-alerts"
 alias hist='less +G $HISTFILE'
+
+# ssh aliases
+alias cantor='ssh rfox.xyz -p 9292'
+alias rob-pc='ssh rob-pc'
+alias rob-xps='ssh rob-xps'
