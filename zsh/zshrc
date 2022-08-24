@@ -44,7 +44,7 @@ case $(whoami) in
 esac
 
 export EDITOR=/usr/bin/vim
-typeset -g NTFY_EXCLUDE=(vim ssh tmux watch journalctl ping crontab WhereDoThePeersComeFrom.py)
+typeset -g NTFY_EXCLUDE=(vim ssh tmux watch journalctl ping crontab WhereDoThePeersComeFrom.py cantor rob-pc rob-xps)
 typeset -g NTFY_MIN_SECONDS=300
 typeset -g NTFY_URL="https://ntfy.rfox.xyz/zsh-alerts"
 alias hist='less +G $HISTFILE'
