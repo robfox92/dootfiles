@@ -55,6 +55,11 @@ typeset -g Repositories=/home/rob/Repositories
 typeset -g Repos=$Repositories
 typeset -g repos=$Repositories
 
+# add scripts to the path
+if [ -d /home/rob/Repositories/misc/scripts ]; then
+  PATH=/home/rob/Repositories/misc/scripts:$PATH
+fi
+
 # friendly history
 alias hist='less +G $HISTFILE'
 
