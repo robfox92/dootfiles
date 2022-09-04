@@ -44,10 +44,18 @@ case $(whoami) in
 esac
 
 export EDITOR=/usr/bin/vim
+
+# settings for ntfy-long-command
 typeset -g NTFY_EXCLUDE=(vim ssh tmux watch journalctl ping crontab WhereDoThePeersComeFrom.py cantor rob-pc rob-xps launch_labs_docker.sh mpv)
 typeset -g NTFY_MIN_SECONDS=300
 typeset -g NTFY_URL="https://ntfy.rfox.xyz/zsh-alerts"
-typeset -g Repos=/home/rob/Repositories
+
+# shortcuts to repos
+typeset -g Repositories=/home/rob/Repositories
+typeset -g Repos=$Repositories
+typeset -g repos=$Repositories
+
+# friendly history
 alias hist='less +G $HISTFILE'
 
 # ssh aliases
