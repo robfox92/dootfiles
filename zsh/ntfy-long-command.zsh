@@ -41,7 +41,7 @@ function ntfy_precmd() {
       local minutes=$(($(($NTFY_DURATION%3600))/60))
       local seconds=$(($NTFY_DURATION%60))
       local display_duration=${hours}:${(l(2)(0))minutes}:${(l(2)(0))seconds}
-      local ntfy_payload="command \""$NTFY_CMD"\" on "$(hostname)" complete (took "$display_duration")"
+      local ntfy_payload="command \""$NTFY_CMD"\" on "$(hostname)" complete\ntook "$display_duration"\nexit code "$?
       curl  -d $ntfy_payload \
             -H "Tags: "$(hostname)"" \
             -S -s -o /dev/null \
